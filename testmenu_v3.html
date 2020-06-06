@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      a {
+        display: block;
+        width: 150px;
+        height: 50px;
+        background-color: hotpink;
+        text-decoration: none;
+        text-align: center;
+        line-height: 50px;
+      }
+      /*      
+      #open,
+      #close {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+      }
+      #close {
+        top: -50px;
+      }
+*/
+      #close {
+        display: none;
+      }
+      #menu {
+        /*
+        position: absolute;
+        top: 50px;
+*/
+        display: none;
+        width: 150px;
+        transform-origin: top center;
+        transform: scaleY(0);
+        transition: all 0.5s;
+      }
+      #menu li {
+        width: 150px;
+        height: 50px;
+        list-style: none;
+        background-color: coral;
+        text-align: center;
+        border-bottom: 1px solid #000;
+      }
+      #menu li a {
+        text-decoration: none;
+        line-height: 50px;
+      }
+      #open:focus {
+        transform: translateY(-50px);
+        //        top: -50px;
+      }
+      #open:focus + #close {
+        display: block;
+        transform: translateY(-50px);
+        //        top: 0px;
+      }
+      #open:focus ~ #menu {
+        display: block;
+        transform: scaleY(1);
+        transform: translateY(-50px);
+        margin-bottom: -50px;
+      }
+      #close:focus ~ #menu {
+        transform: scaleY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <a id="open" href="#">OPEN MENU</a>
+    <a id="close" href="#">CLOSE MENU</a>
+    <ul id="menu">
+      <li><a href="#">Item 1</a></li>
+      <li><a href="#">Item 2</a></li>
+      <li><a href="#">Item 3</a></li>
+      <li><a href="#">Item 4</a></li>
+    </ul>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad tempora rerum architecto laudantium consequatur
+      impedit, dolorum eaque dolore porro, ipsam maiores? Facilis numquam consequuntur animi?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad tempora rerum architecto laudantium consequatur
+      impedit, dolorum eaque dolore porro, ipsam maiores? Facilis numquam consequuntur animi?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad tempora rerum architecto laudantium consequatur
+      impedit, dolorum eaque dolore porro, ipsam maiores? Facilis numquam consequuntur animi?
+    </p>
+  </body>
+</html>

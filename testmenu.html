@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      #toggler {
+        display: block;
+        width: 150px;
+        height: 50px;
+        background-color: aqua;
+        text-decoration: none;
+        text-align: center;
+        line-height: 50px;
+        overflow: hidden;
+      }
+      #menu {
+        display: block;
+        width: 150px;
+        transform-origin: top center;
+        transform: scaleY(0);
+        transition: all 0.5s;
+      }
+      #menu li {
+        width: 150px;
+        height: 50px;
+        list-style: none;
+        background-color: coral;
+        text-align: center;
+        border-bottom: 1px solid #000;
+      }
+      #menu li a {
+        text-decoration: none;
+        line-height: 50px;
+      }
+      #toggler:focus + #menu {
+        display: block;
+        transform: scaleY(1);
+      }
+    </style>
+  </head>
+  <body>
+    <a id="toggler" href="#">OPEN MENU</a>
+    <ul id="menu">
+      <li><a href="#">Item 1</a></li>
+      <li><a href="#">Item 2</a></li>
+      <li><a href="#">Item 3</a></li>
+      <li><a href="#">Item 4</a></li>
+    </ul>
+    <div></div>
+  </body>
+</html>
